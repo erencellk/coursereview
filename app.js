@@ -19,7 +19,9 @@ function toggleSidebar() {
     hamburger.style.right = '10px';
   }
 }
-const sidebar = document.getElementById('sidebar');
-if(sidebar.classList.toggle=='collapsed'){
-    sidebar.classList.toggle('hidden');
-}
+
+
+const toggleButon = document.getElementById('themeToggle');
+toggleButon.addEventListener('click',()=>{
+  document.body.classList.toggle('white-mode');
+})
