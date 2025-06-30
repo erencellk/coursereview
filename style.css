@@ -1,289 +1,298 @@
  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    background-color: #222;
-    color: white; 
-    max-height: min-content;
-    padding: 0;
+     margin: 0;
+     font-family: Arial, sans-serif;
+     display: flex;
+     background-color: #222;
+     color: white;
+     max-height: min-content;
+     padding: 0;
 
 
-}
+ }
 
-body.white-mode {
-    color: black;
-    background-color: white;
-}
+ body.white-mode {
+     color: black;
+     background-color: white;
+ }
 
-body.white-mode .sidebar {
-    background-color: #f0f0f0;
-    color: black;
-}
+ body.white-mode .sidebar {
+     background-color: #f0f0f0;
+     color: black;
+ }
 
-body.white-mode .sidebar button {
-    color: black;
-}
+ body.white-mode .sidebar button {
+     color: black;
+ }
 
-body.white-mode .section-header {
-    color: black;
-}
+ body.white-mode .section-header {
+     color: black;
+ }
 
-body.white-mode .temadegistir button {
-    color: black;
-}
+ body.white-mode .temadegistir button {
+     color: black;
+ }
 
-body.white-mode .content-box {
-    background-color: #ddd;
-    color: black;
-}
+ body.white-mode .content-box {
+     background-color: #ddd;
+     color: black;
+ }
 
-body.white-mode .content-box i {
-    color: #0077cc;
-}
+ body.white-mode .content-box i {
+     color: #0077cc;
+ }
 
-body.white-mode .egitim-icerigi,
-body.white-mode .egitim-info-baslik,
-body.white-mode .egitim-info-aciklama {
-    color: black;
-}
+ body.white-mode .egitim-icerigi,
+ body.white-mode .egitim-info-baslik,
+ body.white-mode .egitim-info-aciklama {
+     color: black;
+ }
 
-body.white-mode .bolum-buton {
-    background-color: #ccc;
-    color: black;
-}
+ body.white-mode .bolum-buton {
+     background-color: #ccc;
+     color: black;
+ }
 
 
-body.white-mode .video-line a {
-    background-color: #ddd;
-    color: black;
-}
+ body.white-mode .video-line a {
+     background-color: #ddd;
+     color: black;
+ }
 
-.sidebar {
-    width: 350px;
-    background-color: #222;
-    padding: 20px;
-    overflow-y:auto;
-    transition: width  0.9s ease , padding 0.6s ease-in-out;
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    flex-shrink: 0;
-    z-index: 1000;
-    box-shadow: 2px 0 12px rgba(0,0,0,0.3);
-    
+ .sidebar {
+     width: 350px;
+     background-color: #222;
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+     overflow-y: auto;
+     transition: width 0.9s ease, padding 0.6s ease-in-out;
+     position: fixed;
+     top: 0;
+     height: 100vh;
+     flex-shrink: 0;
+     z-index: 1000;
+     box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
 
-}
 
-.sidebar.collapsed {
-    width: 0;
-    padding: 0;
-    overflow: hidden;
-}
+ }
 
-.main-content {
-    flex: 1;
-    padding: 30px;
-    overflow-y: auto;
-    margin-left: 385px;
-    padding:20px;
+ .sidebar.collapsed {
+     width: 0;
+     padding: 0;
+     overflow: hidden;
+ }
+
+ .main-content {
+     flex: 1;
+     padding: 30px;
+     overflow-y: auto;
+     margin-left: 385px;
+     padding: 20px;
+
+
+
+ }
+
+ .hamburger {
+     position: absolute;
+     right: 10px;
+     top: 10px;
+     z-index: 999;
+     font-size: 24px;
+     background: none;
+     border: none;
+     color: white;
+     cursor: pointer;
+ }
+
+ .sidebar-list {
+     display: flex;
+     flex-direction: column;
+     height: 1000px;
+     padding-bottom: 100px;
+     overflow-y: scroll;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
  
-  
 
-}
-
-.hamburger {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 999;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.sidebar-list {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+ }
 
 
-}
+ .section-header {
+     cursor: pointer;
+     padding: 10px;
+     font-weight: normal;
+     font-size: large;
+     transition: 0.3s;
 
-
-.section-header {
-    cursor: pointer;
-    padding: 10px;
-    font-weight: normal;
-    font-size: large;
-    transition: 0.3s;
-
-}
+ }
 
 
 
-.section-content {
-    display: inline-block;
-    margin-left: 15px;
-    border: 1px 2px 3px 4px rgb(red, green, blue);
-    justify-content: space-between;
-}
+ .section-content {
+     display: inline-block;
+     margin-left: 15px;
+     border: 1px 2px 3px 4px rgb(red, green, blue);
+     justify-content: space-between;
+ }
 
-.section-content li {
-    margin-left: 10px;
-    list-style-type: none;
-}
+ .section-content li {
+     margin-left: 10px;
+     list-style-type: none;
+ }
 
-.content-box a i span {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: xx-large;
+ .content-box a i span {
+     color: white;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     font-size: xx-large;
 
-}
+ }
 
-.content-box {
-    background-color: #444;
-    padding: 3px 5px 3px 0px;
-    margin: 2px 1px;
-    border-radius: 5px;
-    display: block;
-    list-style: none;
-    margin-bottom: 8px;
-    margin-left: -10px;
-    align-items: center;
-    justify-content: space-between;
-    transform: translateX(-15px);
-    transition: transform 0.3s ease;
+ .content-box {
+     background-color: #444;
+     padding: 3px 5px 3px 0px;
+     margin: 2px 1px;
+     border-radius: 5px;
+     display: block;
+     list-style: none;
+     margin-bottom: 8px;
+     margin-left: -10px;
+     align-items: center;
+     justify-content: space-between;
+     transform: translateX(-15px);
+     transition: transform 0.3s ease;
 
-}
+ }
 
-.content-box i {
-    color: #00bfff;
-    font-size: 1.2rem;
-    width: 40px;
-}
+ .content-box i {
+     color: #00bfff;
+     font-size: 1.2rem;
+     width: 40px;
+ }
 
-.video-line a i span {
-    width: 40px;
-}
+ .video-line a i span {
+     width: 40px;
+ }
 
-.video-line a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #444;
-    padding: 10px 15px;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: normal;
-    justify-content: flex-start;
-}
+ .video-line a {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     background-color: #444;
+     padding: 10px 15px;
+     border-radius: 10px;
+     color: white;
+     text-decoration: none;
+     font-family: Arial, sans-serif;
+     font-size: 15px;
+     font-weight: 500;
+     text-transform: none;
+     letter-spacing: normal;
+     justify-content: flex-start;
+ }
 
-.section-content li a span {
-    display: flex;
+ .section-content li a span {
+     display: flex;
 
-}
+ }
 
-.sidebar.collapsed .hamburger {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    right: auto;
-}
-
-
-.iframe-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
-
-.iframe-video {
-    width: 100%;
-
-    height: 550px;
-    border-radius: 20px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-}
-
-.egitim-icerigi {
-    text-align: center;
-    font-size: large;
-
-}
-
-.butonlar {
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    gap: 4px;
-}
-
-.bolum-buton {
-    background-color: #444;
-    color: white;
-    width: 430px;
-    max-width: 1200px;
-    height: 50px;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-.video-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 12px;
-    margin-top: 10px;
-    box-sizing: border-box;
-    color: white;
-    gap: 20px;
-    width: 240px;
-}
-
-.circular-wrapper {
-    position: relative;
-
-}
+ .sidebar.collapsed .hamburger {
+     position: fixed;
+     top: 10px;
+     left: 10px;
+     right: auto;
+ }
 
 
-.progress-text {
-    position: absolute;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-}
+ .iframe-wrapper {
+     display: flex;
+     justify-content: center;
+     margin-top: 15px;
+     margin-bottom: 30px;
+ }
 
-.sidebar.collapsed~.main-content .iframe-video {
-    width: 95%;
-    height: 500px;
+ .iframe-video {
+     width: 100%;
 
-}
-.sidebar.collapsed ~ .main-content {
-    margin-left: 60px; /* sidebar daraldığında içerik de yaklaşsın */
-}
+     height: 550px;
+     border-radius: 20px;
+     box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+ }
 
-.sidebar.collapsed~.main-content .butonlar {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    gap: 5px;
-    flex-direction: row;
+ .egitim-icerigi {
+     text-align: center;
+     font-size: large;
 
-}
+ }
 
-/* .sidebar.collapsed~.main-content #solbuton,
+ .butonlar {
+     text-align: center;
+     justify-content: space-between;
+     align-items: center;
+     display: flex;
+     gap: 4px;
+ }
+
+ .bolum-buton {
+     background-color: #444;
+     color: white;
+     width: 430px;
+     max-width: 1200px;
+     height: 50px;
+     border-radius: 12px;
+     cursor: pointer;
+ }
+
+ .video-line {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-radius: 12px;
+     margin-top: 10px;
+     box-sizing: border-box;
+     color: white;
+     gap: 20px;
+     width: 240px;
+ }
+
+ .circular-wrapper {
+     position: relative;
+
+ }
+
+
+ .progress-text {
+     position: absolute;
+     font-size: 12px;
+     color: white;
+     font-weight: bold;
+ }
+
+ .sidebar.collapsed~.main-content .iframe-video {
+     width: 95%;
+     height: 500px;
+
+ }
+
+ .sidebar.collapsed~.main-content {
+     margin-left: 60px;
+     /* sidebar daraldığında içerik de yaklaşsın */
+ }
+
+ .sidebar.collapsed~.main-content .butonlar {
+     width: 100%;
+     height: 100px;
+     display: flex;
+     gap: 5px;
+     flex-direction: row;
+
+ }
+
+ /* .sidebar.collapsed~.main-content #solbuton,
 .sidebar.collapsed~.main-content #sagbuton {
   flex: 2;
   width: 95%;
@@ -293,125 +302,128 @@ body.white-mode .video-line a {
   
   
 } */
-.sidebar.collapsed~.main-content #solbuton {
-    flex: 2;
-    width: 95%;
-    font-size: 15px;
-    height: 50px;
-    margin-left: 40px;
-    margin-right: 2.5px;
-}
+ .sidebar.collapsed~.main-content #solbuton {
+     flex: 2;
+     width: 95%;
+     font-size: 15px;
+     height: 50px;
+     margin-left: 40px;
+     margin-right: 2.5px;
+ }
 
-.sidebar.collapsed~.main-content #sagbuton {
-    flex: 2;
-    width: 95%;
-    font-size: 15px;
-    height: 50px;
-    margin-right: 30px;
-    margin-left: 2px;
-}
-
-
-.ilerleme {
-    background-color:green;
-    color: white;
-    font-weight: normal;
-    padding: 4px 8px;
-    border-radius: 50%;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.video-line a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    text-decoration: none;
-    flex-grow: 1;
-}
-
-.temadegistir {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 10px;
-    justify-content: end;
-}
-
-.temadegistir button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.sidebar.collapsed ~ .main-content .egitim-info {
-  margin-left: 40px;
-}
+ .sidebar.collapsed~.main-content #sagbuton {
+     flex: 2;
+     width: 95%;
+     font-size: 15px;
+     height: 50px;
+     margin-right: 30px;
+     margin-left: 2px;
+ }
 
 
-.sidebar:not(.collapsed)~.main-content .butonlar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
+ .ilerleme {
+     background-color: green;
+     color: white;
+     font-weight: normal;
+     padding: 4px 8px;
+     border-radius: 50%;
+     font-size: 14px;
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+ }
 
-.sidebar:not(.collapsed)~.main-content .bolum-buton {
-    flex: 1;
-    max-width: 525px;
-    font-size: 16px;
-    height: 55px;
-}
-.sidebar.collapsed~.main-content .temadegistir button{
-    margin-right: 20px;
-}
+ .video-line a {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     color: white;
+     text-decoration: none;
+     flex-grow: 1;
+ }
 
-.content-box .video-line i{
-    margin:2px 1px;
-}
+ .temadegistir {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     margin: 10px;
+     justify-content: end;
+ }
 
-.main-content #solbuton {
-    margin-right: 20px;
-}
+ .temadegistir button {
+     background-color: transparent;
+     color: white;
+     border: none;
+     font-size: 16px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     font-family: 'Poppins', sans-serif;
+ }
 
-.main-content #sagbuton {
-    margin-left: 20px;
-}
+ .sidebar.collapsed~.main-content .egitim-info {
+     margin-left: 40px;
+ }
 
-.video-line a.active-video{
-    background-color:#2196f3;
-    color:white;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-.video-line a.active-video i{
-    color: white;
-}
-body.white-mode .video-line a.active-video {
-  background-color: #2196f3;
-  color: black;
-}
 
-.kilit{
-    background-color: rgb(244, 244, 244);
-    color: white;
-    font-weight: normal;
-    padding: 4px 8px;
-    border-radius: 50%;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+ .sidebar:not(.collapsed)~.main-content .butonlar {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     margin-top: 15px;
+ }
+
+ .sidebar:not(.collapsed)~.main-content .bolum-buton {
+     flex: 1;
+     max-width: 525px;
+     font-size: 16px;
+     height: 55px;
+ }
+
+ .sidebar.collapsed~.main-content .temadegistir button {
+     margin-right: 20px;
+ }
+
+ .content-box .video-line i {
+     margin: 2px 1px;
+ }
+
+ .main-content #solbuton {
+     margin-right: 20px;
+ }
+
+ .main-content #sagbuton {
+     margin-left: 20px;
+ }
+
+ .video-line a.active-video {
+     background-color: #2196f3;
+     color: white;
+     border-radius: 10px;
+     transition: background-color 0.3s ease;
+ }
+
+ .video-line a.active-video i {
+     color: white;
+ }
+
+ body.white-mode .video-line a.active-video {
+     background-color: #2196f3;
+     color: black;
+ }
+
+ .kilit {
+     background-color: rgb(244, 244, 244);
+     color: white;
+     font-weight: normal;
+     padding: 4px 8px;
+     border-radius: 50%;
+     font-size: 14px;
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+ }
